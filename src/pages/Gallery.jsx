@@ -1,14 +1,14 @@
 import React from 'react';
 import '../styles/Gallery.css';
-import img1 from '../assets/Blood_Donation.JPG';
-import img2 from '../assets/Educationalsupport.JPG';
-import img3 from '../assets/Pola.JPG';
-import img4 from '../assets/Politician.JPG';
-import img5 from '../assets/SkillDev.JPG';
-import img6 from '../assets/Mahaprasad.JPG';
-import img7 from '../assets/CHCC.JPG';
-import img9 from '../assets/Dance.JPG';
-import img8 from '../assets/TreePlantation.JPG';
+import img1 from '../assets/blood_donation.JPG';
+import img2 from '../assets/educationalsupport.JPG';
+import img3 from '../assets/pola.JPG';
+import img4 from '../assets/politician.JPG';
+import img5 from '../assets/skilldev.JPG';
+import img6 from '../assets/mahaprasad.JPG';
+import img7 from '../assets/chcc.JPG';
+import img9 from '../assets/dance.JPG';
+import img8 from '../assets/treeplantation.JPG';
 
 const galleryItems = [
   {
