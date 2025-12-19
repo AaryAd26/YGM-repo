@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Home.css';
-import bannerImage from '../assets/banner.jpg'; 
+import bannerImage from '../assets/Banner.jpg'; 
 
 import Seva2016 from '../assets/Seva2016.jpg'; 
 import Seva2017 from '../assets/Seva2017.jpg';
