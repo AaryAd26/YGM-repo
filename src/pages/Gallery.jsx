@@ -5,7 +5,7 @@ import img2 from "../assets/educationalsupport.JPG";
 import img3 from "../assets/pola.JPG";
 import img4 from "../assets/politician.jpg";
 import img5 from "../assets/skilldev.jpg";
-import img6 from "../assets/Mahaprasad.JPG";
+import img6 from "../assets/mahaprasad.JPG";
 import img7 from "../assets/chcc.JPG";
 import img9 from "../assets/dance.JPG";
 import img8 from "../assets/treeplantation.JPG";
