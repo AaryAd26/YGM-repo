@@ -220,7 +220,7 @@ function Home() {
           events. Interested in featuring your brand? View our latest brochure below.
         </p>
         <a
-          href="src/assets/ygm2026.pdf"
+          href="/ygm2026.pdf"
           className="brochure-link"
           target="_blank"
           rel="noopener noreferrer"
