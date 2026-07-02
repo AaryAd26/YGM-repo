@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Home.css";
-import bannerImage from "../assets/bannerJPG.jpg";
+import bannerImage from "../assets/banner.JPG";
 
 import seva2016 from "../assets/seva2016.jpg";
 import seva2017 from "../assets/seva2017.jpg";
@@ -10,15 +10,15 @@ import seva2021 from "../assets/seva2021.jpg";
 import seva2022 from "../assets/seva2022.jpg";
 import seva2023 from "../assets/seva2023.jpg";
 import seva2024 from "../assets/seva2024.jpg";
-import award2010 from "../assets/award2010.jpg";
-import bappa2010 from "../assets/bappa2010.jpg";
-import bappa2025 from "../assets/bappa2025.jpg";
-import bappaface from "../assets/bappaface.jpg";
-import decoration2025 from "../assets/decoration2025.jpg";
-import shivling2025 from "../assets/shivling2025.jpg";
-import gate2025 from "../assets/gate2025.jpg";
-import theme2025 from "../assets/theme2025.jpg";
-import grp202 from "../assets/grp202.jpg";
+import award2010 from "../assets/award2010.JPG";
+import bappa2010 from "../assets/bappa2010.JPG";
+import bappa2025 from "../assets/bappa2025.JPG";
+import bappaface from "../assets/bappaface.JPG";
+import decoration2025 from "../assets/decoration2025.JPG";
+import shivling2025 from "../assets/shivling2025.JPG";
+import gate2025 from "../assets/gate2025.JPG";
+import theme2025 from "../assets/theme2025.JPG";
+import grp202 from "../assets/grp202.JPG";
 
 
 const SEVA_PHOTOS = [
