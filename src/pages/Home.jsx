@@ -71,22 +71,22 @@ const INFO_CARDS = [
 // Sample entries — swap in real feedback from volunteers, donors, or attendees.
 const TESTIMONIALS = [
   {
-    name: "Arnav Deshmukh",
-    role: "Volunteer, since 2008",
+    name: "Mr. Shekhar Khune",
+    role: "Owner of Aurag Developers",
     quote:
-      "Being part of the seva team every year has taught me what real community spirit looks like. The mandal feels like family."
+      "Partnering with Mana Cha Raja Yuvak Ganesh Mandal as a sponsor was a great decision for our brand. The event was professionally organized, attracted a huge crowd, and provided excellent visibility through banners, stage branding, and social media promotions. We received genuine exposure throughout the celebration, and the entire team ensured that every sponsor received the recognition promised. It's truly an event worth supporting and attending. We look forward to collaborating again next year."
   },
   {
-    name: "Priya Kulkarni",
-    role: "Local resident",
+    name: "Mr. Kartik Shende",
+    role: "Administrative Director of Vitthoba Industries",
     quote:
-      "The blood donation camp they organized was so well run. Everything from registration to aftercare was handled with care."
+      "Being associated with Mana Cha Raja Yuvak Ganesh Mandal gave our business outstanding brand exposure. From prominent logo placements to continuous announcements and digital promotions, our brand reached thousands of people during the event. The enthusiasm of the visitors and the flawless event management made the experience even more valuable. We highly recommend businesses to be a part of this celebration if they are looking for meaningful community engagement and effective branding."
   },
   {
-    name: "Anil Wagh",
-    role: "Donor",
+    name: "",
+    role: "Retail Partner Hokko Ice Cream",
     quote:
-      "Transparent, dedicated, and always putting the community first. Proud to support the work this foundation does."
+      "Sponsoring the Mana Cha Raja Yuvak Ganesh Mandal event exceeded our expectations. The organizers maintained excellent communication, delivered every branding commitment, and created a memorable experience for both sponsors and visitors. The event attracted an impressive audience, giving our brand significant visibility within the community. It's more than just a festival—it's a platform that connects businesses with people. We are proud to have been a sponsor and are excited to support future editions."
   }
 ];
 
