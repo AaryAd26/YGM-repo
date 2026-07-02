@@ -17,12 +17,7 @@ import img14 from "../assets/prize2025.JPG";
 import img15 from "../assets/prize2025.JPG";
 import img16 from "../assets/ramraksha2025.JPG";
 
-// ---- Add more photos here ----
-// 1. Put the image file in src/assets/
-// 2. Import it above (always use a relative import like the ones above —
-//    never a hardcoded local file path, it won't work when the site is built)
-// 3. Add a matching object to GALLERY_ITEMS below with title, description,
-//    and category (pick from CATEGORY_ORDER, or add a new one there too)
+
 
 const GALLERY_ITEMS = [
   {

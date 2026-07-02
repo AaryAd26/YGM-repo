@@ -19,10 +19,7 @@ import shivling2025 from "../assets/shivling2025.jpg";
 import gate2025 from "../assets/gate2025.jpg";
 import theme2025 from "../assets/theme2025.jpg";
 import grp202 from "../assets/grp202.jpg";
-// To add more photos: import the image above, then add a new
-// { year: "...", img: YourImport } entry to SEVA_PHOTOS below.
-// The two marquee rows split and rebalance automatically —
-// no other changes needed.
+
 
 const SEVA_PHOTOS = [
   { year: "2016", img: seva2016 },
@@ -44,8 +41,6 @@ const SEVA_PHOTOS = [
   { year: "2025", img: grp202 }
 ];
 
-// Alternating split keeps both rows balanced no matter how many
-// photos are added above.
 const MARQUEE_ROW_1 = SEVA_PHOTOS.filter((_, idx) => idx % 2 === 0);
 const MARQUEE_ROW_2 = SEVA_PHOTOS.filter((_, idx) => idx % 2 !== 0);
 
