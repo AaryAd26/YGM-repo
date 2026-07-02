@@ -2,13 +2,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Navbar from './component/navbar';
-import Footer from './component/footer';
+import Navbar from './component/Navbar';
+import Footer from './component/Footer';
 
-import Home from './pages/home';
-import Activities from './pages/activities';
-import Contact from './pages/contact';
-import Gallery from './pages/gallery';
+import Home from './pages/Home';
+import Activities from './pages/Activities';
+import Contact from './pages/Contact';
+import Gallery from './pages/Gallery';
 
 const App = () => {
   return (
