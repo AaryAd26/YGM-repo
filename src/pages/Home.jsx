@@ -5,7 +5,7 @@ import bannerImage from "../assets/banner.JPG";
 import seva2016 from "../assets/seva2016.jpg";
 import seva2018 from "../assets/seva2018.jpg";
 import seva2019 from "../assets/seva2019.jpg";
-import seva2021 from "../assets/seva2021.jpg";
+import seva2021 from "../assets/seva2021.JPG";
 import seva2022 from "../assets/seva2022.jpg";
 import seva2023 from "../assets/seva2023.jpg";
 import seva2024 from "../assets/seva2024.jpg";
