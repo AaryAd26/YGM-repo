@@ -3,7 +3,6 @@ import "../styles/Home.css";
 import bannerImage from "../assets/banner.JPG";
 
 import seva2016 from "../assets/seva2016.jpg";
-import seva2017 from "../assets/seva2017.jpg";
 import seva2018 from "../assets/seva2018.jpg";
 import seva2019 from "../assets/seva2019.jpg";
 import seva2021 from "../assets/seva2021.jpg";
@@ -23,7 +22,6 @@ import grp202 from "../assets/grp202.JPG";
 
 const SEVA_PHOTOS = [
   { year: "2016", img: seva2016 },
-  { year: "2017", img: seva2017 },
   { year: "2018", img: seva2018 },
   { year: "2019", img: seva2019 },
   { year: "2021", img: seva2021 },
