@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Work+Sans:wght@400;500;600&display=swap');
+
+.gallery-container {
+  --cream: #fbf3e7;
+  --ink: #2b1b12;
+  --maroon: #7a1f2b;
+  --saffron: #e8871e;
+  --gold: #c9a227;
+
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--navbar-offset, 6.5rem) 2rem 5rem;
+  background: var(--cream);
+  font-family: "Work Sans", sans-serif;
+  color: var(--ink);
+}
+
+/* ---------- Header ---------- */
+
+.gallery-header {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--saffron);
+  margin-bottom: 0.5rem;
+}
+
+.gallery-title {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  line-height: 1.1;
+  color: var(--maroon);
+  margin: 0 0 0.75rem;
+}
+
+.section-divider {
+  display: block;
+  width: 160px;
+  height: 14px;
+  margin: 0 auto 1.25rem;
+}
+
+.section-divider path {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.gallery-subtitle {
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: rgba(43, 27, 18, 0.72);
+  margin: 0;
+}
+
+/* ---------- Filters ---------- */
+
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.filter-pill {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(43, 27, 18, 0.14);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.filter-pill:hover {
+  border-color: var(--saffron);
+  transform: translateY(-1px);
+}
+
+.filter-pill--active {
+  background: var(--maroon);
+  border-color: var(--maroon);
+  color: var(--cream);
+}
+
+/* ---------- Grid ---------- */
+
+.gallery-grid {
+  column-count: 3;
+  column-gap: 1.75rem;
+}
+
+.gallery-item {
+  display: block;
+  width: 100%;
+  break-inside: avoid;
+  margin-bottom: 1.75rem;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  border-radius: 16px;
+}
+
+.gallery-item:focus-visible {
+  outline: 2px solid var(--saffron);
+  outline-offset: 3px;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px -16px rgba(43, 27, 18, 0.35);
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.06);
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.1rem;
+  background: linear-gradient(to top, rgba(43, 27, 18, 0.88) 0%, rgba(43, 27, 18, 0.15) 55%, rgba(43, 27, 18, 0) 80%);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.gallery-item:hover .image-overlay,
+.gallery-item:focus-visible .image-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-category {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f4c98c;
+  margin-bottom: 0.4rem;
+}
+
+.image-title {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--cream);
+  margin: 0 0 0.3rem;
+}
+
+.image-description {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: rgba(251, 243, 231, 0.85);
+  margin: 0;
+}
+
+/* ---------- Lightbox ---------- */
+
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(20, 12, 8, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+  animation: lightbox-fade-in 0.2s ease;
+}
+
+@keyframes lightbox-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 68vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 24px 48px -20px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-caption {
+  text-align: center;
+  margin-top: 1.1rem;
+  max-width: 560px;
+}
+
+.lightbox-caption .image-category {
+  color: var(--gold);
+}
+
+.lightbox-caption .image-title {
+  color: var(--cream);
+  font-size: 1.15rem;
+}
+
+.lightbox-caption .image-description {
+  color: rgba(251, 243, 231, 0.78);
+}
+
+.lightbox-close,
+.lightbox-nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: rgba(251, 243, 231, 0.12);
+  color: var(--cream);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+  background: var(--saffron);
+  color: var(--ink);
+}
+
+.lightbox-close {
+  top: -0.5rem;
+  right: -0.5rem;
+  width: 38px;
+  height: 38px;
+}
+
+.lightbox-close svg {
+  width: 18px;
+  height: 18px;
+}
+
+.lightbox-nav {
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  transform: translateY(-50%);
+}
+
+.lightbox-nav svg {
+  width: 22px;
+  height: 22px;
+}
+
+.lightbox-nav--prev {
+  left: -0.5rem;
+}
+
+.lightbox-nav--next {
+  right: -0.5rem;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .gallery-grid {
+    column-count: 2;
+    column-gap: 1.25rem;
+  }
+
+  .gallery-item {
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-container {
+    padding: var(--navbar-offset, 7.5rem) 1.25rem 3.5rem;
+  }
+
+  .gallery-grid {
+    column-count: 1;
+  }
+
+  .lightbox-close {
+    top: -2.5rem;
+    right: 0;
+  }
+
+  .lightbox-nav {
+    width: 38px;
+    height: 38px;
+  }
+
+  .lightbox-nav--prev {
+    left: -0.25rem;
+  }
+
+  .lightbox-nav--next {
+    right: -0.25rem;
+  }
+}

@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Work+Sans:wght@400;500;600&display=swap');
+
+.activities-container {
+  --cream: #fbf3e7;
+  --ink: #2b1b12;
+  --maroon: #7a1f2b;
+  --saffron: #e8871e;
+  --gold: #c9a227;
+  --card-bg: #ffffff;
+  --border-soft: rgba(43, 27, 18, 0.1);
+
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: var(--navbar-offset, 6.5rem) 1.5rem 5rem;
+  background: var(--cream);
+  font-family: 'Work Sans', sans-serif;
+  color: var(--ink);
+}
+
+/* ---------- Header ---------- */
+
+.activities-header {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+}
+
+.activities-eyebrow {
+  display: inline-block;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--saffron);
+  margin-bottom: 0.75rem;
+}
+
+.activities-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  line-height: 1.1;
+  color: var(--maroon);
+  margin: 0 0 0.75rem;
+}
+
+.activities-subtitle {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: rgba(43, 27, 18, 0.72);
+  margin: 0 0 2rem;
+}
+
+.garland-divider {
+  width: 100%;
+  max-width: 320px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+.garland-divider path {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+/* ---------- Filters ---------- */
+
+.activities-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 3rem;
+}
+
+.filter-pill {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.filter-pill:hover {
+  border-color: var(--saffron);
+  transform: translateY(-1px);
+}
+
+.filter-pill--active {
+  background: var(--maroon);
+  border-color: var(--maroon);
+  color: var(--cream);
+}
+
+/* ---------- Grid ---------- */
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem 1.5rem;
+}
+
+/* ---------- Card ---------- */
+
+.activity-card {
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid var(--border-soft);
+  border-radius: 4px;
+  padding: 2.25rem 1.5rem 1.75rem;
+  opacity: 0;
+  transform: translateY(14px);
+  animation: card-in 0.5s ease forwards;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -12px rgba(43, 27, 18, 0.25);
+}
+
+@keyframes card-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .activity-card {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Pennant notch — the bunting-flag signature */
+.activity-pennant {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34px;
+  height: 14px;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  background: var(--pennant-color, var(--saffron));
+}
+
+.activity-card.category-religious { --pennant-color: #7a1f2b; }
+.activity-card.category-spiritual { --pennant-color: #e8871e; }
+.activity-card.category-youth { --pennant-color: #1f6f5c; }
+.activity-card.category-social-service { --pennant-color: #c9a227; }
+.activity-card.category-environment { --pennant-color: #4b7b3f; }
+.activity-card.category-cultural { --pennant-color: #b23a48; }
+/* Social Service and Environment classes above already cover
+   the Bhandara and Idol Workshop cards added later. */
+
+.activity-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--pennant-color, var(--saffron)) 14%, white);
+  color: var(--pennant-color, var(--saffron));
+  margin-bottom: 1.1rem;
+}
+
+.activity-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.activity-category {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pennant-color, var(--saffron));
+  margin-bottom: 0.5rem;
+}
+
+.activity-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  color: var(--ink);
+  margin: 0 0 0.5rem;
+}
+
+.activity-description {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgba(43, 27, 18, 0.68);
+  margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 480px) {
+  .activities-container {
+    padding: 3rem 1.25rem 3.5rem;
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+}
