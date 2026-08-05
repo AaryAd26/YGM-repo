@@ -19,7 +19,7 @@ const CONTACT_ITEMS = [
     icon: "map-pin",
     text: "M.I.G Colony Hanuman Mandir Ground, Trimurti Nagar, Nagpur - 440022"
   },
-  { icon: "phone", text: "+91 83088 55630" },
+  { icon: "phone", text: "+91 72489 99853" },
   { icon: "mail", text: "ygmsocialfoundation@gmail.com" }
 ];
 
